@@ -8,34 +8,34 @@
     <title>Css Positioning Demo</title>
 </head>
 
-<body onload="defaultValue()">
+<body>
     <div class="header">
         <h1>CSS Positioning Demo</h1>
     </div>
     <div class="btn-container">
         Static:<label class="switch">
-            <input type="checkbox" value="static" onchange="toggleCheckbox(this)" checked>
+            <input type="checkbox" value="static" onchange="toggleCheckbox(this)" name="position" checked>
             <span class="slider round"></span>
           </label>
         Relative:<label class="switch">
-            <input type="checkbox" value="relative" onchange="toggleCheckbox(this)">
+            <input type="checkbox" value="relative" onchange="toggleCheckbox(this)" name="position">
             <span class="slider round"></span>
           </label>
         Absolute:<label class="switch">
-            <input type="checkbox" value="absolute" onchange="toggleCheckbox(this)">
+            <input type="checkbox" value="absolute" onchange="toggleCheckbox(this)" name="position">
             <span class="slider round"></span>
           </label>
         Fixed:<label class="switch">
-            <input type="checkbox" value="fixed" onchange="toggleCheckbox(this)">
+            <input type="checkbox" value="fixed" onchange="toggleCheckbox(this)" name="position">
             <span class="slider round"></span>
           </label>
     </div>
     <div class="display-container">
         <h2>Static Position</h2>
-        <p>position : static;</p>
+        <p id="position">position : static;</p>
         <p>left : 50px;</p>
         <p>top : 50px;</p>
-        <div class="box">
+        <div id="box">
             
         </div>
     </div>

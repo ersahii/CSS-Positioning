@@ -1,7 +1,8 @@
-const box = document.querySelector(".box");
+const box = document.querySelector("#box");
 const switchValues =document.querySelector("input");   
-const chks = document.querySelectorAll("input")
-function defaultValue(){
+const chks = document.querySelectorAll("input");
+function toggleCheckbox(element)
+{
     for (let i = 0; i < chks.length; i++) {
         chks[i].onclick = function () {
             for (let i = 0; i < chks.length; i++) {
@@ -11,23 +12,28 @@ function defaultValue(){
             }
         };
     }
-}
-function toggleCheckbox(element)
- {
-   let positionValue =element.value;
-   if(positionValue === "static"){
+    let positionValue =element.value;
+   if(positionValue === "static"){ 
     box.classList.toggle("static");
-   }
-   if(positionValue === "relative"){
+    document.querySelector("h2").innerHTML= "Static Position";
+    document.getElementById('position').innerHTML= "position: static;";
+}
+if(positionValue === "relative"){
     box.classList.toggle("relative");
+    document.querySelector("h2").innerHTML= "Relative Position";
+    document.getElementById('position').innerHTML= "position: relative;";
     switchValues.checked = false;
-   }
-   if(positionValue === "absolute"){
+}
+if(positionValue === "absolute"){
     box.classList.toggle("absolute");
+    document.querySelector("h2").innerHTML= "Absolute Position";
+    document.getElementById('position').innerHTML= "position: absolute;";
     switchValues.checked = false;
-   }
-   if(positionValue === "fixed"){
+}
+if(positionValue === "fixed"){
     box.classList.toggle("fixed");
+    document.querySelector("h2").innerHTML= "Fixed Position";
+    document.getElementById('position').innerHTML= "position: fixed;";
     switchValues.checked = false;
    }
  }
