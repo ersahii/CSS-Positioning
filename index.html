@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Css Positioning Demo</title>
+</head>
+
+<body onload="defaultValue()">
+    <div class="header">
+        <h1>CSS Positioning Demo</h1>
+    </div>
+    <div class="btn-container">
+        Static:<label class="switch">
+            <input type="checkbox" value="static" onchange="toggleCheckbox(this)" checked>
+            <span class="slider round"></span>
+          </label>
+        Relative:<label class="switch">
+            <input type="checkbox" value="relative" onchange="toggleCheckbox(this)">
+            <span class="slider round"></span>
+          </label>
+        Absolute:<label class="switch">
+            <input type="checkbox" value="absolute" onchange="toggleCheckbox(this)">
+            <span class="slider round"></span>
+          </label>
+        Fixed:<label class="switch">
+            <input type="checkbox" value="fixed" onchange="toggleCheckbox(this)">
+            <span class="slider round"></span>
+          </label>
+    </div>
+    <div class="display-container">
+        <h2>Static Position</h2>
+        <p>position : static;</p>
+        <p>left : 50px;</p>
+        <p>top : 50px;</p>
+        <div class="box">
+            
+        </div>
+    </div>
+    <footer>
+        <p>Copyright© Mir Mehraj Mushtaq-2024</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+
+</html>
